@@ -21,4 +21,9 @@ public class Input {
         }
         return arr;
     }
+    public int takeInt(){
+        System.out.print("Enter the No: ");
+        int num = this.input.nextInt();
+        return num;
+    }
 }
