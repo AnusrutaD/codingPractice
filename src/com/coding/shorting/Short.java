@@ -5,23 +5,25 @@ import java.util.List;
 
 public class Short {
 
-    public void mergeSort(List<Integer> arrayToSort){
+    public List<Integer> mergeSort(List<Integer> arrayToSort){
         if(arrayToSort.size() <= 1){
-            return;
+            return arrayToSort;
         }
-        int start = 0, end  = arrayToSort.size() - 1;
-        int mid = start + (end - start) / 2;
+        int mid = arrayToSort.size() / 2;
         List<Integer> leftPart = new ArrayList<Integer>();
         List<Integer> rightPart = new ArrayList<Integer>();
-        for(int i = start; i <= mid; i++){
+        for(int i = 0; i < mid; i++){
             leftPart.add(arrayToSort.get(i));
         }
-        for(int i = mid + 1; i <= end; i++){
+        for(int i = mid; i < arrayToSort.size(); i++){
             rightPart.add(arrayToSort.get(i));
         }
-        mergeSort(leftPart);
-        mergeSort(rightPart);
-        arrayToSort = merge(leftPart, rightPart);
+//        System.out.println(arrayToSort);
+//        System.out.println(leftPart);
+//        System.out.println(rightPart);
+        leftPart = mergeSort(leftPart);
+        rightPart = mergeSort(rightPart);
+        return merge(leftPart, rightPart);
     }
 
 //    This is the Method to merge to unsorted array and return the sorted Array
