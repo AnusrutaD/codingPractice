@@ -8,8 +8,9 @@ public class Main {
     public static void main(String[] args) {
         Search search = new Search();
         Input input = new Input();
-        List<Integer> arr = input.takeIntArr();
-        int ele = input.takeInt();
-        System.out.println(search.binarySearch(arr, ele));
+        List<List<Integer>> mat = input.takeIntMatrix();
+        int k = input.takeInt();
+        System.out.println(search.kthSmallest(mat, k));
+
     }
 }
