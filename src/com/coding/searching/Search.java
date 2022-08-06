@@ -34,8 +34,6 @@ public class Search {
             int mid = min + (max - min) / 2;
             // Find the no of elements is lesser than equals to mid
             int count = 0;
-            int lower = min;
-            int higher = max;
 
             int i = col - 1, j = 0;
             // Checking start from first element of last row ]
