@@ -30,7 +30,7 @@ public class Solution {
     }
 
     //    Nearest smaller element (Very famous problem) TC: O(N) SC: O(N) (N => size of input array)
-    public List<Integer> nse(List<Integer> arr){
+    public List<Integer> nsl(List<Integer> arr){
         // Create the stack
         Stack<Integer> st = new Stack<>();
         List<Integer> ans = new ArrayList<>();
@@ -48,4 +48,27 @@ public class Solution {
         }
         return ans;
     }
+
+    // Largest Rectangle in Histogram
+    public int largestRectangle(List<Integer> arr){
+        return 0;
+    }
+    public List<Integer> nslIdx(List<Integer> arr){
+        Stack<Integer> st = new Stack<>();
+        List<Integer> ans = new ArrayList<>();
+        for (int i = 0; i< arr.size(); i++){
+            while (!st.isEmpty() && arr.get(st.peek()) >= arr.get(i)){
+                st.pop();
+            }
+            if(st.isEmpty()){
+                ans.add(-1);
+            }
+            else{
+                ans.add(st.peek());
+            }
+            st.push(i);
+        }
+        return ans;
+    }
+
 }

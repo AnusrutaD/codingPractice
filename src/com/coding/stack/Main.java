@@ -37,7 +37,7 @@ public class Main {
         Solution solution = new Solution();
 
 //        System.out.println(solution.merge2SortedStack(st1, st2));
-        System.out.println(solution.nse(Input.takeIntArr()));
+        System.out.println(solution.nslIdx(Input.takeIntArr()));
     }
 }
 
