@@ -29,11 +29,17 @@ public class Main {
 //        } catch (Exception e){
 //            e.printStackTrace();
 //        }
-        Stack<Integer> st1 = Input.takeIntStack();
-        Stack<Integer> st2 = Input.takeIntStack();
+
+
+//        Stack<Integer> st1 = Input.takeIntStack();
+//        Stack<Integer> st2 = Input.takeIntStack();
 
         Solution solution = new Solution();
 
-        System.out.println(solution.merge2SortedStack(st1, st2));
+//        System.out.println(solution.merge2SortedStack(st1, st2));
+        System.out.println(solution.nse(Input.takeIntArr()));
     }
 }
+
+//  4  5  2  10  18  2
+// -1  4 -1  2   10 -1

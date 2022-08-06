@@ -1,5 +1,7 @@
 package com.coding.stack;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 public class Solution {
@@ -25,5 +27,25 @@ public class Solution {
             res.push(ans.pop());
         }
         return res;
+    }
+
+    //    Nearest smaller element (Very famous problem)
+    public List<Integer> nse(List<Integer> arr){
+        // Create the stack
+        Stack<Integer> st = new Stack<>();
+        List<Integer> ans = new ArrayList<>();
+        for (int ele: arr){
+            while(!st.isEmpty() && st.peek() >= ele){
+                st.pop();
+            }
+            if(st.isEmpty()){
+                ans.add(-1);
+            }
+            else{
+                ans.add(st.peek());
+            }
+            st.push(ele);
+        }
+        return ans;
     }
 }
