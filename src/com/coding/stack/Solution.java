@@ -50,9 +50,16 @@ public class Solution {
         return ans;
     }
 
-    // Largest Rectangle in Histogram
+    // Largest Rectangle in Histogram (leetcode problem)
     public int largestRectangle(List<Integer> arr){
-        return 0;
+        List<Integer> nsl = nslIdx(arr);
+        List<Integer> nsr = nsrIdx(arr);
+        int ans = 0;
+        for(int i = 0; i < arr.size(); i++){
+            int area = (nsr.get(i) - nsl.get(i) - 1) * arr.get(i);
+            ans = Math.max(ans, area);
+        }
+        return ans;
     }
 
     // Nearest smaller Index in the left
