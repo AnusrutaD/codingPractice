@@ -29,7 +29,7 @@ public class Solution {
         return res;
     }
 
-    //    Nearest smaller element (Very famous problem)
+    //    Nearest smaller element (Very famous problem) TC: O(N) SC: O(N) (N => size of input array)
     public List<Integer> nse(List<Integer> arr){
         // Create the stack
         Stack<Integer> st = new Stack<>();
