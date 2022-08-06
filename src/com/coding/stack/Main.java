@@ -3,6 +3,7 @@ package com.coding.stack;
 import com.coding.exception.StackIsEmptyException;
 import com.coding.input.Input;
 
+import java.util.List;
 import java.util.Stack;
 
 public class Main {
@@ -37,9 +38,12 @@ public class Main {
         Solution solution = new Solution();
 
 //        System.out.println(solution.merge2SortedStack(st1, st2));
-        System.out.println(solution.nslIdx(Input.takeIntArr()));
+        List<Integer> lst = Input.takeIntArr();
+        System.out.println(solution.nslIdx(lst));
+        System.out.println(solution.nsrIdx(lst));
     }
 }
 
 //  4  5  2  10  18  2
 // -1  4 -1  2   10 -1
+// 2 6 9 7 5 1

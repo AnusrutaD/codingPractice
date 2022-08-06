@@ -1,6 +1,7 @@
 package com.coding.stack;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
@@ -53,6 +54,8 @@ public class Solution {
     public int largestRectangle(List<Integer> arr){
         return 0;
     }
+
+    // Nearest smaller Index in the left
     public List<Integer> nslIdx(List<Integer> arr){
         Stack<Integer> st = new Stack<>();
         List<Integer> ans = new ArrayList<>();
@@ -68,6 +71,26 @@ public class Solution {
             }
             st.push(i);
         }
+        return ans;
+    }
+
+    // Nearest smaller Index in the right
+    public List<Integer> nsrIdx(List<Integer> arr){
+        Stack<Integer> st = new Stack<>();
+        List<Integer> ans = new ArrayList<>();
+        for (int i = arr.size() - 1; i >= 0; i--){
+            while (!st.isEmpty() && arr.get(st.peek()) >= arr.get(i)){
+                st.pop();
+            }
+            if(st.isEmpty()){
+                ans.add(-1);
+            }
+            else{
+                ans.add(st.peek());
+            }
+            st.push(i);
+        }
+        Collections.reverse(ans);
         return ans;
     }
 
