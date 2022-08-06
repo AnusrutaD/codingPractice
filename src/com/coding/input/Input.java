@@ -3,45 +3,56 @@ package com.coding.input;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Input {
-    private Scanner input;
+    private static Scanner input;
 
-    public Input(){
+    static{
         input = new Scanner(System.in);
     }
 
-    public List<Integer> takeIntArr(){
+    public static List<Integer> takeIntArr(){
         System.out.print("Enter the Size: ");
-        int size = this.input.nextInt();
+        int size = input.nextInt();
         List<Integer> arr = new ArrayList<>();
         System.out.print("\nEnter the elements: ");
         for(int i = 0; i< size; i++){
-            arr.add(this.input.nextInt());
+            arr.add(input.nextInt());
         }
         return arr;
     }
 
-    public List<List<Integer>> takeIntMatrix(){
+    public static List<List<Integer>> takeIntMatrix(){
         System.out.print("Enter the Row Size: ");
-        int row = this.input.nextInt();
+        int row = input.nextInt();
         System.out.print("\nEnter the Column Size: ");
-        int col = this.input.nextInt();
+        int col = input.nextInt();
 
         System.out.println("Enter the elements");
         List<List<Integer>> mat = new ArrayList<>();
         for(int i = 0; i < row; i++){
             List<Integer> r = new ArrayList<>();
             for(int j = 0; j < col; j++){
-                r.add(this.input.nextInt());
+                r.add(input.nextInt());
             }
             mat.add(r);
         }
         return mat;
     }
-    public int takeInt(){
+    public static int takeInt(){
         System.out.print("Enter the No: ");
-        int num = this.input.nextInt();
+        int num = input.nextInt();
         return num;
+    }
+    public static Stack<Integer> takeIntStack(){
+        System.out.print("Enter the Size: ");
+        int size = input.nextInt();
+
+        Stack<Integer> st = new Stack<Integer>();
+        for (int i = 0; i < size; i++){
+            st.push(input.nextInt());
+        }
+        return st;
     }
 }
