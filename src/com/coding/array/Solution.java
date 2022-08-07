@@ -16,11 +16,16 @@ public class Solution {
             leftMax.add(Math.max(leftMax.get(i -1), height.get(i)));
         }
         List<Integer> rightMax = new ArrayList<>();
+
+        for(int i = 0; i < size - 1; i++){
+            rightMax.add(0);
+        }
         rightMax.add(height.get(size - 1));
         for(int i = size - 2; i >= 0; i--){
-            rightMax.get(Math.max(rightMax.get(i - 1), height.get(i)));
+//            System.out.println(rightMax.size());
+//            System.out.println(size - i - 2);
+            rightMax.set(i, Math.max(rightMax.get(i + 1), height.get(i)));
         }
-        Collections.reverse(rightMax);
         // System.out.println(Arrays.toString(leftIdx));
         // System.out.println(Arrays.toString(rightIdx));
         int ans = 0;
