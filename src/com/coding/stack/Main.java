@@ -39,9 +39,9 @@ public class Main {
 
 //        System.out.println(solution.merge2SortedStack(st1, st2));
         List<Integer> lst = Input.takeIntArr();
-//        System.out.println(solution.nslIdx(lst));
-//        System.out.println(solution.nsrIdx(lst));
-        System.out.println(solution.largestRectangle(lst));
+        System.out.println(solution.nslIdx(lst));
+        System.out.println(solution.nsrIdx(lst));
+//        System.out.println(solution.largestRectangle(lst));
 
     }
 }
