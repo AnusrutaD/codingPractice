@@ -18,7 +18,7 @@ public class Solution {
         }
         for(int i = 0; i < circles.length; i++){
             for(int j= i + 1; j < circles.length; j++){
-                if(distSquare(circles[i], circles[j]) <= ((circles[j][2] - circles[i][2]) * (circles[j][2] - circles[i][2]))){
+                if(distSquare(circles[i], circles[j]) <= ((circles[j][2] + circles[i][2]) * (circles[j][2] + circles[i][2]))){
                     adj.get(i).add(j);
                     adj.get(j).add(i);
                 }
