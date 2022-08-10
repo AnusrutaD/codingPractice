@@ -15,3 +15,11 @@ formed from optimal solutions to the overlapping subproblems of the original pro
 
 ### [198. House Robber problem](https://leetcode.com/problems/house-robber/)
 
+We can do by memoise the previous data inside an array of same length, 
+For that the 
+
+- Time Complexity : O(N)
+- Space Complexity: O(N);
+
+we can decrease the space complexity ti O(1);
+
