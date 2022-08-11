@@ -21,11 +21,9 @@ storing the value of sub problem to use it again in future
 - go down recursively to the smaller subproblem for which we already know the answer 
 (base case)
 
-2. Bottom Down DP ( <span style="color: magenta">Recursion + Memoization</span> ):
-- Start with a bigger problem
-- go down recursively to the smaller subproblem for which we already know the answer
-  (base case)
-
+2. Bottom up DP ( <span style="color: magenta">Iterative</span> ):
+- Start with a sub problem which we already know the solution and use that to iteratively 
+Solve the bigger problem
 
 ## Some Problems from leetcode
 
