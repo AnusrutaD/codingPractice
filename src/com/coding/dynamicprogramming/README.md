@@ -1,14 +1,30 @@
 # DYNAMIC PROGRAMMING
 
-is a programming paradigm that can systematically and 
+Is a programming paradigm that can systematically and 
 efficiently explore all possible solutions to a problem. 
 As such, it is capable of solving a wide variety of problems 
 that often have the following characteristics:
 
-1. The problem can be broken down into "overlapping subproblems" - 
+1. The problem can be broken down into **Overlapping Subproblems** - 
 smaller versions of the original problem that are re-used multiple times.
-2. The problem has an "optimal substructure" - an optimal solution can be 
-formed from optimal solutions to the overlapping subproblems of the original problem.
+2. The problem has an **Optimal Substructure** - any given problem has optimal
+Substructure if the solution of the given problem can be 
+formade from the optimal solutions to the overlapping subproblems of the original problem.
+
+### Memoization: 
+storing the value of sub problem to use it again in future
+
+<p style="color: yellow">There are 2 ways to solve DP problem</p>
+
+1. Top Down DP ( <span style="color: magenta">Recursion + Memoization</span> ):
+- Start with a bigger problem
+- go down recursively to the smaller subproblem for which we already know the answer 
+(base case)
+
+2. Bottom Down DP ( <span style="color: magenta">Recursion + Memoization</span> ):
+- Start with a bigger problem
+- go down recursively to the smaller subproblem for which we already know the answer
+  (base case)
 
 
 ## Some Problems from leetcode
