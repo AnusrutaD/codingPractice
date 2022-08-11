@@ -15,7 +15,7 @@ public class Main {
             nums[i] = Integer.parseInt(inputStr[i]);
         }
         Solution solution = new Solution();
-        int res = solution.rob(nums);
+        int res = solution.lengthOfLIS(nums);
         System.out.println(res);
     }
 }
