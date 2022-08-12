@@ -25,6 +25,10 @@ storing the value of sub problem to use it again in future
 - Start with a sub problem which we already know the solution and use that to iteratively 
 Solve the bigger problem
 
+
+## Questions
+- Fibonacci Series
+
 ## Some Problems from leetcode
 
 ### [198. House Robber problem](https://leetcode.com/problems/house-robber/)
