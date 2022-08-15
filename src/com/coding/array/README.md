@@ -7,10 +7,10 @@
 Use Kadane's  Algo (Carry Forward)
 
 ### 2. Beggars Outside Temple
-
 - create an array will all the values are 0
 - Traverse through the queries 
   - add `q[i][3]` to `input[q[i][0] - 1]` and substract `q[i][3]` from `input[q[i][1]]`
+- calculate the `PrefixSum` of the array and return
 
 ### 3.  Rain Water Trapped
 
