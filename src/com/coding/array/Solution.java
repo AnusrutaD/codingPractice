@@ -34,4 +34,21 @@ public class Solution {
         }
         return ans;
     }
+
+
+    // Array - 3
+    // 1. Maximum Absolute Defferencre
+    public int maxArr(ArrayList<Integer> A) {
+        int Xmax = Integer.MIN_VALUE;
+        int Xmin = Integer.MAX_VALUE;
+        int Ymax = Integer.MIN_VALUE;
+        int Ymin = Integer.MAX_VALUE;
+        for(int i = 0; i < A.size(); i++){
+            Xmax = Math.max(Xmax, A.get(i) + i);
+            Xmin = Math.min(Xmin, A.get(i) + i);
+            Ymax = Math.max(Ymax, A.get(i) - i);
+            Ymin = Math.min(Ymin, A.get(i) - i);
+        }
+        return Math.max((Xmax - Xmin), (Ymax - Ymin));
+    }
 }

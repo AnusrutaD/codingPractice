@@ -6,3 +6,6 @@
 
 - Calculate prefix sum of whole matrix
 - calculate as per the query
+
+
+### [1. Sum of all the submatrices](#)
