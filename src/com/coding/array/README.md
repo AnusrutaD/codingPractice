@@ -33,5 +33,13 @@ Approach1: TC: O(N<sup>2</sup>), SC : O(1);
 Approach2: TC: O(N), SC : O(1);
 
 
+### [2. Find First Missing integer](https://leetcode.com/problems/first-missing-positive/submissions/)
+
+
+### [3. Merge Intervals](https://leetcode.com/problems/first-missing-positive/submissions/)
+
+
+### [4. Max Chunks To Make Sorted](https://leetcode.com/problems/max-chunks-to-make-sorted/)
+
 
 
